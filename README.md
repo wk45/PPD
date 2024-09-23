@@ -4,7 +4,7 @@ This repository contains MATLAB code accompanying the paper:
 
 [Peak-Persistence Diagrams for Estimating Shapes and Functions from Noisy Data](https://arxiv.org/abs/2305.04826)
 
-The code provides a simple illustration of the Peak-Persistence Diagrams (PPD) method for estimating unknown shapes and functions from noisy data. It includes:
+The code provides a simple illustration of the Peak-Persistence Diagrams (PPD) method for estimating unknown shapes and functions from noisy data using MATLAB. It includes:
 
 - Function Files: Located in the `/functions` folder.
 - Computational Examples: Explored in the `main.m` script.
