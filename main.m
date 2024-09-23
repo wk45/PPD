@@ -1,7 +1,18 @@
-%% load data
-load example1.mat
+%% Load Example Data
+load('example1.mat');
 
-% You can skip (Step 0) as example data contains aligned functions.
+% Note: Step 0 (Data Alignment) can be skipped since the example data 
+%       already contains aligned functions.
+
+% The loaded example data includes the following variables:
+%   - Fa            : Cell array (1 x length(lam)), where each cell contains 
+%                     an aligned function matrix of size (n x m).
+%   - lam           : Vector of candidate lambda values.
+%   - t             : Time steps as a row vector (1 x m).
+%   - f             : Raw, unaligned data as a matrix (n x m).
+%   - g             : Ground truth function as a row vector (1 x m).
+%   - additiveNoise : Matrix of true additive noise (n x m).
+%   - phaseNoise    : Matrix of true phase noise (n x m).
 
 %% (Step 0) Obtain a lambda candidate set
 
