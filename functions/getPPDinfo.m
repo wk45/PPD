@@ -24,7 +24,7 @@ function [IndicatorMatrix, Curvatures, Heights, Locs, Labels, FNm] = getPPDinfo(
         [Labels{i + 1}, labelMax] = peak_successor(Fa{i}', Fa{i + 1}', currentLabel, labelMax, 1);
         
         % Find peak locations in the next function's mean
-        FNmNextMean = mean(Fa{i + 1});
+        FNmNextMean = mean(Fa{i + 1}, 1);
         idxMaxNext = find(islocalmax(FNmNextMean));
         Locs{i + 1} = idxMaxNext';
         
