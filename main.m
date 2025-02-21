@@ -1,3 +1,5 @@
+addpath('functions');
+
 %% Load Example Data
 load('example1.mat');
 
@@ -32,7 +34,6 @@ load('example1.mat');
     labelMax = size(IndicatorMatrix,2);
     
     % Choose optimal lambda
-    
     ref_row = zeros(1,size(IndicatorMatrix,2));
     ref_row(persistent_peak_labels) = 1;
     
@@ -61,7 +62,7 @@ load('example1.mat');
     end
     
     % Draw PPD BarChart
-    drawPPDBarChart(IndicatorMatrix,Heights,lam,size(IndicatorMatrix,2),idx_opt)
+    drawPPDBarChart(IndicatorMatrix,Heights,lam,idx_opt)
     % Draw PPD Surface
     drawPPDSurface(t,lam,FNm,Heights,Locs,IndicatorMatrix,Labels,idx_opt)
 

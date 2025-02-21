@@ -13,6 +13,7 @@ function tau_prctile = find_tau(t, f, pt, displayFlag)
         idx = islocalmax(f(i,:));
         df2 = gradient(gradient(f(i,:), diff_t), diff_t);
         tau = -df2 / max(-df2);
+        tau = max(tau,0);
         taus = [taus, tau(idx)];
     end
 

@@ -33,7 +33,7 @@ function [] = BarColors(mat,lam,col)
                 width = x_end - x_start;
                 
                 rectangle('Position', [x_start, k - 0.5, width, 1], ...
-                          'EdgeColor', col, 'FaceColor', col);
+                          'EdgeColor', "none", 'FaceColor', col);
             end
         end
     end
