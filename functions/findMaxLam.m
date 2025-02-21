@@ -18,13 +18,13 @@ function maxlam = findMaxLam(t,f,maxVal,n_grid,varargin)
     if parallel
         disp('Running in parallel mode');
         parfor i = 1:n_grid
-            fns = mainWarpingWrapper(t,f',lam_rough(i));
+            [fns, ~, ~] = mainWarpingWrapper(t,f',lam_rough(i));
             Ft_rough{i} = fns;
         end
     else
         disp('Running in sequential mode');
         for i = 1:n_grid
-            fns = mainWarpingWrapper(t,f',lam_rough(i));
+            [fns, ~, ~] = mainWarpingWrapper(t,f',lam_rough(i));
             Ft_rough{i} = fns;
         end
     end
